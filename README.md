@@ -44,7 +44,7 @@ There are several routes available for this api. The routes are:
 
 ## 🚀 Deployment <a name = "deployment"></a>
 
-This application is deployed on heroku at https://exercise-tracker-api-dannyb101.herokuapp.com/
+This application is deployed on render at https://exercise-tracker-oxef.onrender.com
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
