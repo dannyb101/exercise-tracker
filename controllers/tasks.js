@@ -37,8 +37,10 @@ const addExercise = asyncWrapper(async (req, res, next) => {
 
 	res.json({
 		username: user.username,
+		description: exerciseLog.description,
+		duration: exerciseLog.duration,
 		_id: user._id,
-		...exerciseLog,
+		date: exerciseLog.date,
 	});
 });
 
