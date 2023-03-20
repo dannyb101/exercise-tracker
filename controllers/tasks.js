@@ -34,7 +34,12 @@ const addExercise = asyncWrapper(async (req, res, next) => {
 
 	user.log.push(exerciseLog);
 	user.save();
-	res.json(user);
+
+	res.json({
+		username: user.username,
+		_id: user._id,
+		...exerciseLog,
+	});
 });
 
 const getExerciseLog = async (req, res, next) => {
