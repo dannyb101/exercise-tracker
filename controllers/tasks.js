@@ -21,8 +21,6 @@ const addExercise = asyncWrapper(async (req, res, next) => {
 	let date;
 	const user = await Tracker.findById(req.params._id);
 
-	console.log(req.body);
-
 	if (req.body.date) {
 		date = new Date(req.body.date).toDateString();
 	} else {
@@ -36,14 +34,6 @@ const addExercise = asyncWrapper(async (req, res, next) => {
 
 	user.log.push(exerciseLog);
 	user.save();
-
-	console.log(`User: ${user}`);
-
-	console.log(typeof user.username);
-	console.log(typeof exerciseLog.description);
-	console.log(typeof exerciseLog.duration);
-	console.log(typeof user._id);
-	console.log(typeof exerciseLog.date);
 
 	res.json({
 		username: user.username,
